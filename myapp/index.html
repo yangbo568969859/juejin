@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover">
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+  <link rel="shortcut icon" href="/static/img/favicon1.ico" type="image/x-icon">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_559307_gjos9zydyfyfogvi.css">
+  <title>myapp</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- <script src="./static/dll/<%= htmlWebpackPlugin.options.vendorJsName %>"></script> -->
+  <!-- <canvas id="c_n12" width="1920" height="632" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"></canvas> -->
+</body>
+
+</html>
+<script>
+  // 点击爱心
+  ! function (e, t, a) {
+    function n() {
+      c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), o(), r()
+    }
+
+    function r() {
+      for (var e = 0; e < d.length; e++) d[e].alpha <= 0 ? (t.body.removeChild(d[e].el), d.splice(e, 1)) : (d[e].y-- , d[e].scale += .004, d[e].alpha -= .013, d[e].el.style.cssText = "left:" + d[e].x + "px;top:" + d[e].y + "px;opacity:" + d[e].alpha + ";transform:scale(" + d[e].scale + "," + d[e].scale + ") rotate(45deg);background:" + d[e].color + ";z-index:99999");
+      requestAnimationFrame(r)
+    }
+
+    function o() {
+      var t = "function" == typeof e.onclick && e.onclick;
+      e.onclick = function (e) {
+        t && t(), i(e)
+      }
+    }
+
+    function i(e) {
+      var a = t.createElement("div");
+      a.className = "heart", d.push({
+        el: a,
+        x: e.clientX - 5,
+        y: e.clientY - 5,
+        scale: 1,
+        alpha: 1,
+        color: s()
+      }), t.body.appendChild(a)
+    }
+
+    function c(e) {
+      var a = t.createElement("style");
+      a.type = "text/css";
+      try {
+        a.appendChild(t.createTextNode(e))
+      } catch (t) {
+        a.styleSheet.cssText = e
+      }
+      t.getElementsByTagName("head")[0].appendChild(a)
+    }
+
+    function s() {
+      return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+    }
+
+    var d = [];
+    e.requestAnimationFrame = function () {
+      return e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+        setTimeout(e, 1e3 / 60)
+      }
+    }(), n()
+  }(window, document);
+
+  // console.log("\n %c 梦魇|专注于分享 QQ:1058221214 %c https://blog.ihoey.com/ \n\n", "color: #FF0000; background: #4bffba; padding:5px 0; border-radius: 5px 5px 5px 5px;", "background: #fadfa3; padding:5px 0; border-radius: 5px 5px 5px 5px;");
+  // console.log('%c一颗红心向太阳,吼吼~', 'text-shadow: 3px 1px 1px grey');
+  // console.info('%c楼上药不能停！', 'text-shadow: 3px 1px 1px grey');
+  // console.warn('%c楼上嘴太贱！', 'text-shadow: 3px 1px 1px grey');
+  // console.info('%c楼上关你毛事？', 'text-shadow: 3px 1px 1px grey');
+  // console.log('%c都不要说啦！', 'text-shadow: 3px 1px 1px grey');
+  // console.warn('%c楼主，你的购物车该结账了！', 'text-shadow: 3px 1px 1px grey');
+  // console.info('嘚瑟嘚瑟！哈哈，钱不够不准向我借，最讨厌借钱的人了，哼哼！！');
+  // console.log('%c女朋友就是私有变量，只有我这个类才能调用！', 'background-image:-webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );color:transparent;-webkit-background-clip: text;font-size:2em;');
+  // console.log('程序员A：哎 太累了日子没法过了 怎么才能换行啊');
+  // console.log('程序员B：打回车呀！');
+</script>
+<script>
+  // window.onload = function () {
+  //   document.addEventListener('visibilitychange', function () {
+  //     if (document.hidden) {
+  //       $('[rel="icon"]').attr('href', "/images/fail.ico");
+  //       document.title = '╭(°A°`)╮ 页面崩溃啦 ~ 快回来看看~ | 梦魇小栈！';
+  //       clearTimeout(titleTime);
+  //     } else {
+  //       $('[rel="icon"]').attr('href', "/favicon.ico");
+  //       document.title = '(ฅ>ω<*ฅ) 噫又好了~' + OriginTitile;
+  //       titleTime = setTimeout(function () {
+  //         document.title = OriginTitile;
+  //       }, 2000);
+  //     }
+  //   });
+  // }
+</script>
+<script>
+  // canvas
+  // !function () {
+  //   function o(w, v, i) {
+  //     return w.getAttribute(v) || i
+  //   }
+  //   function j(i) {
+  //     return document.getElementsByTagName(i)
+  //   }
+  //   function l() {
+  //     var i = j("script"), w = i.length, v = i[w - 1];
+  //     return { l: w, z: o(v, "zIndex", -1), o: o(v, "opacity", 0.5), c: o(v, "color", "0, 0, 0"), n: o(v, "count", 99) }
+  //   }
+  //   function k() {
+  //     r = u.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+  //     n = u.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+  //   }
+  //   function b() {
+  //     e.clearRect(0, 0, r, n);
+  //     var w = [f].concat(t);
+  //     var x, v, A, B, z, y;
+  //     t.forEach(function (i) {
+  //       i.x += i.xa,
+  //       i.y += i.ya,
+  //       i.xa *= i.x > r || i.x < 0 ? -1 : 1,
+  //       i.ya *= i.y > n || i.y < 0 ? -1 : 1,
+  //       e.fillRect(i.x - 0.5, i.y - 0.5, 1, 1);
+  //       for (v = 0; v < w.length; v++) {
+  //         x = w[v];
+  //         if (i !== x && null !== x.x && null !== x.y) {
+  //           B = i.x - x.x, z = i.y - x.y, y = B * B + z * z;
+  //           y < x.max && (x === f && y >= x.max / 2 && (i.x -= 0.03 * B, i.y -= 0.03 * z), A = (x.max - y) / x.max, e.beginPath(), e.lineWidth = A / 2, e.strokeStyle = "rgba(" + s.c + "," + (A + 0.2) + ")", e.moveTo(i.x, i.y), e.lineTo(x.x, x.y), e.stroke())
+  //         }
+  //       }
+  //       w.splice(w.indexOf(i), 1)
+  //     }), m(b)
+  //   }
+  //   var u = document.createElement("canvas"), s = l(), c = "c_n" + s.l, e = u.getContext("2d"), r, n, m = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (i) { window.setTimeout(i, 1000 / 45) }, a = Math.random, f = { x: null, y: null, max: 20000 };
+  //   u.id = c;
+  //   u.style.cssText = "position:fixed;top:0;left:0;z-index:" + s.z + ";opacity:" + s.o; j("body")[0].appendChild(u);
+  //   k(), window.onresize = k;
+  //   window.onmousemove = function (i) { i = i || window.event, f.x = i.clientX, f.y = i.clientY }, window.onmouseout = function () { f.x = null, f.y = null };
+  //   for (var t = [], p = 0; s.n > p; p++) {
+  //     var h = a() * r, g = a() * n, q = 2 * a() - 1, d = 2 * a() - 1; t.push({ x: h, y: g, xa: q, ya: d, max: 6000 })
+  //   } setTimeout(function () { b() }, 100)
+  // }();
+</script>
+<!-- Hotjar Tracking Code for 192.168.5.29 -->
+<script>
+  // 评论系统
+  // (function (h, o, t, j, a, r) {
+  //   h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+  //   h._hjSettings = { hjid: 837261, hjsv: 6 };
+  //   a = o.getElementsByTagName('head')[0];
+  //   r = o.createElement('script'); r.async = 1;
+  //   r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+  //   a.appendChild(r);
+  // })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+</script>

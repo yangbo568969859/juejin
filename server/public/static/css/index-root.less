@@ -1,0 +1,83 @@
+// 导航栏下滑动画
+.small-nav{
+  position: relative;
+  transition: all .2s linear;
+}
+.small-nav::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 0;
+  height: 100%;
+  border-bottom: 2px solid #217c8e;
+  transition: all .2s linear;
+}
+.small-nav:hover::before {
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition-delay: 0.1s;
+  border-bottom-color: #217c8e;
+}
+.small-nav:hover ~ .small-nav::before {
+  left: 0;
+}
+.small-nav:active {
+  background: #217c8e;
+  color: #fff;
+}
+// 导航栏样式
+.view-nav.view-top{
+  transform: translate3d(0,-5rem,0);
+}
+.view-nav{
+  position: fixed;
+  background: #fff;
+  top: 5rem;
+  left: 0;
+  width:100%;
+  height: 40px;
+  z-index: 100;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+  transition: all .2s;
+  transform: translateZ(0);
+  ul{
+    max-width: 960px;
+    margin: auto;
+    line-height: 1;
+    display: flex;
+    align-items:center;
+    height: 100%;
+    position: relative;
+    li{
+      height: 100%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      font-size: 14px;
+      cursor: pointer;
+      position: relative;
+      a::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+    }
+    li.right{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    li.li-item:hover{
+      color:#217c8e;
+    }
+    li.li-item.active{
+      color:#217c8e;
+    }
+  }
+}
